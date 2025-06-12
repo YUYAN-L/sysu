@@ -1,0 +1,105 @@
+% !TEX program = xelatex
+\documentclass[UTF8, 12pt]{ctexart}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{enumitem}
+\usepackage{setspace}
+\usepackage[top=2.5cm, bottom=2.5cm, left=3cm, right=2.5cm]{geometry}
+\setmainfont{Times New Roman}
+\IfFontExistsTF{SimSun}
+    {\setCJKmainfont{SimSun}}
+    {\setCJKmainfont{FandolSong}}
+\usepackage{fancyhdr}
+\pagestyle{empty}
+\usepackage{hyperref}
+
+\usepackage{gbt7714}
+\bibliographystyle{gbt7714-numerical}
+\begin{document}
+
+% 封面页
+\begin{titlepage}
+\centering
+\vspace*{1.5cm} % 顶部间距调整
+
+% 顶部标题
+{\fontsize{22}{26}\selectfont\textbf{研究生学位论文开题报告}}
+\vspace{2.0cm} % 标题与题目间距
+
+% 论文题目
+{\fontsize{20}{24}\selectfont\textbf{题目：}\underline{\fontsize{18}{22}\selectfont\songti 输入题目}}
+\vspace{3.5cm} % 题目与个人信息间距
+
+% 个人信息（带下划线格式）
+\renewcommand{\arraystretch}{3.5}
+\begin{tabular}{r@{\hspace{1.5em}}c}
+{\fontsize{18}{22}\selectfont\songti 姓\hspace{5.5em}名：} & 
+\underline{\makebox[7cm][c]{\fontsize{18}{22}\selectfont\songti}} \\
+{\fontsize{18}{22}\selectfont\songti 学\hspace{5.5em}号：} & 
+\underline{\makebox[7cm][c]{\fontsize{18}{22}\selectfont\songti }} \\
+{\fontsize{18}{22}\selectfont\songti 专\hspace{5.5em}业：} & 
+\underline{\makebox[7cm][c]{\fontsize{18}{22}\selectfont\songti }} \\
+{\fontsize{18}{22}\selectfont\songti 指导教师（签名）：} & 
+\underline{\makebox[7cm][c]{\fontsize{18}{22}\selectfont\songti}} \\ 
+\end{tabular}
+\renewcommand{\arraystretch}{1}
+
+\vfill % 填充剩余空间
+% 日期部分
+\begin{tabular}{r@{}c}
+\fontsize{18}{22}{日\hspace{1em}期：} & 
+\makebox[4cm][c]{\fontsize{18}{22}\selectfont\songti 20xx.xx} \\
+\end{tabular}
+\end{titlepage}
+
+% 报告正文提纲
+\vspace*{2em}
+\begin{center}
+  \textbf{\zihao{3}\songti 报告正文提纲}
+\end{center}
+\vspace{1em}
+\textbf{\zihao{4}\songti
+\begin{enumerate}[label=\chinese*、, leftmargin=*]
+  \item 研究背景与意义
+  \item 国内外现状与分析
+  \item 研究内容与方案
+  \item 创新点与先进性
+  \item 预期成果
+  \item 计划安排
+\end{enumerate}}
+
+% 正文内容
+\newpage
+\section{研究背景与意义}
+
+\section{研究现状分析}
+
+\section{研究内容与方案}
+
+\section{创新点与先进性}
+
+\section{预期成果}
+
+\section{计划安排}
+\begin{table}[htbp]
+\centering
+\begin{tabular}{ccc}
+\toprule
+序号 & 起止时间 & 工作内容 \\
+\midrule
+1 & 2025.06 - 2025.09 & xx \\
+2 & 2025.10 - 2026.02 & xx \\
+3 & 2026.03 - 2026.06 & xx \\
+4 & 2026.07 - 2026.11 & xx \\
+5 & 2026.12 - 2027.02 & xx \\
+6 & 2027.03 - 2027.04 & 修改与答辩准备 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+% 参考文献
+\bibliography{references}
+
+\end{document}
